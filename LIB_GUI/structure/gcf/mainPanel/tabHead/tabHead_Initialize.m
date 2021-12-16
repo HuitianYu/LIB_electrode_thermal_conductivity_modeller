@@ -1,0 +1,36 @@
+%% TABHEAD_INITIALIZEE
+% creates and initializes the tab head, saves the handle to handles.
+
+% Create and initialize the tab head
+
+pos_mainPanel = get(handles.mainPanel,'Position');
+h_tabHead = uipanel( ...
+                'Parent', handles.mainPanel, ...
+                'Tag', 'tabHead', ...
+                'Units', 'pixels', ...
+                'Position', ...
+                [1, ...
+                pos_mainPanel(4) - fix(pos_mainPanel(4) * heightRatio_tabHead) + 1, ...
+                pos_mainPanel(3), ...
+                fix(pos_mainPanel(4) * heightRatio_tabHead)], ...
+                'BorderType', borderType_tabHead, ...
+                'BackgroundColor', backgroundColor_tabHead ...
+                );
+clear pos_mainPanel
+
+            
+% Set the background for the main panel
+handles = section_backgroundImage(h_tabHead, 'tabHead', 'adjusted', handles);
+guidata(hObject, handles);
+            
+% Save the handle of the tab head to the handles
+handles.tabHead = h_tabHead;
+clear h_tabHead
+guidata(hObject, handles);
+
+% Create and initialize the tab pages
+tabPage_Initialize
+
+
+% Create and initialize vertical lines between tab pages in the tab head
+verticalLine_tabHead_Initialize

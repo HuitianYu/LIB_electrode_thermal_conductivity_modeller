@@ -1,0 +1,14 @@
+run a program: 
+stateProgram = 1;
+change the task icon to active
+enable_inactive
+enable the corresponding push button
+enable the info bar
+
+
+fulfill a program or error:
+stateProgram = 0;
+change the task icon to inactive
+enable_recover
+inactivate the info bar
+

@@ -1,0 +1,33 @@
+%% GCF_INITIALIZE
+% creates and initialize the current figure.
+
+%% Initialize the current figure
+set( gcf, ...
+        'Units', 'pixels', ...
+        'InnerPosition', ...
+        [fix(position_Screen(3)/2), fix(position_Screen(4)/2), 0, 0] + ...
+            [- fix(width_gcf/2), - fix(height_gcf/2), ...
+                width_gcf, height_gcf], ...
+        'Resize', 'off', ...
+        'Color', color_gcf, ...
+        'numberTitle', 'off', ...
+        'Name', title_gcf ...
+        )
+
+%% Create and initialize the components in this figure
+
+% Create and initialize the background image
+backgroundImage_Initialize
+
+% Create and initialize the task icon
+taskIcon_Initialize
+
+% Create and initialize the bottom panel
+bottomPanel_Initialize
+
+% Create and initialize the main panel
+mainPanel_Initialize
+
+% Create and initialize the cover panel
+coverPanel_Initialize
+

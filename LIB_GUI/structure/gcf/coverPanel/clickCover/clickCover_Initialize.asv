@@ -1,0 +1,6 @@
+%% CLICKCOVER_INITIALIZE
+% creates and initializes a push button for click
+
+h_clickCover = label_middle_Initialize(...
+    handles.coverPanel, string_text, color_text, position_label, fontSize_text,...
+    fontWeight_text, suffix);
